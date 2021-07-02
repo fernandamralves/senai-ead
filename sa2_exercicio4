@@ -1,0 +1,6 @@
+L = float(input("Digite o tamanho da linha: "))
+
+def linha(L):
+    for i in range(L):
+        print(end = "_")
+    print(" ") 
