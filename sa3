@@ -5,8 +5,12 @@ compra = float(input('Digite o valor total da compra: R$ '))
 pagamento = float(input('Digite o valor recebido de pagamento: R$ '))
 troco = float(pagamento - compra)
 print('Troco: ',troco)
+
 ced = float(100)
 totced = float(0)
+moed = float(1)
+totmoed = float(0)
+
 while True:
     if troco >= ced:
         troco -= ced
@@ -15,10 +19,8 @@ while True:
         if troco < 0:
             print('Falta R$ {} para pagar a compra.'.format(troco))
             break
-        if troco == 0:
-            print('Não ha necessidade de troco.')
         if totced > 0:
-            print('Total de {} cédulas de R$ {}.'.format(ced, totced))
+            print('{} nota(s) de R$ {}.'.format(totced, ced))
         if ced == 100:
             ced = 50
         elif ced == 50:
@@ -31,8 +33,19 @@ while True:
             ced = 2
         elif ced == 2:
             ced = 1
-        totced = 0
+        if troco <= 1:
+            print('{} moeda(s) de R${}'.format(totmoed, moed))
+        if moed == 1:    
+            moed = 0.50
+        elif moed == 0.50:
+            moed = 0.25
+        elif moed == 0.25:
+            moed = 0.10
+        elif moed == 0.10:
+            moed = 0.05
+        totmoed = 0
         if troco == 0:
             break
+        
 print('-' * 50)
 print('Agradecer ao cliente')
