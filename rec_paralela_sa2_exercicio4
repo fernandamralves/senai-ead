@@ -1,0 +1,2 @@
+numero = int(input("Qual o tamanho desejado da linha: "))
+print("_" * numero)
