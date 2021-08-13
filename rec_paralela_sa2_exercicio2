@@ -1,11 +1,22 @@
-var1 = float(input("Digite um valor: "))
-var2 = float(input("Digite um valor: "))
-var3 = float(input("Digite um valor: "))
-var4 = float(input("Digite um valor: "))
+lista = []
+num = 4
+def Soma(l):
+    Som=0
+    for j in l:
+        Som = Som + j
+    return Som
 
-media = (var1 + var2 + var3 + var4) / 4
-print("Média = ",media)
+print("--- Calculando a média de 4 números ---") 
+print("Digite quatro números a seguir.")
+
+for j in range(0, num):
+    nota = int(input("Digite um número:"))
+ 
+    lista.append(nota) 
+total = Soma(lista)
+media = total / num
+
 if media >= 1:
-    print("A média é positiva")
+    print("A média dos valores é de: +" + str(media) + ". A média é positiva.")
 else:
-    print("A média é negativa")
+    print("A média dos valores é de: -" + str(media) + "A média é negativa.")
