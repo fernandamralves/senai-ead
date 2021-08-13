@@ -1,27 +1,65 @@
-l = [5, 7, 2, 9, 4, 1, 3]
+L =  [5, 7, 2, 9, 4, 1, 3]
 
-print("Lista: ", l)
+L_espacado = "".join(", ".join(str(x) for x in L))
+print ("Lista: " + L_espacado)
+
 print("\n")
+print("--- Exercício 1.a ---")
 
-#tamanho da lista
-print("Tamanho da lista: " + str(len(l)))
+def Tamanho(lista):
+    Cont = 0
+    for j in lista:
+        Cont += 1
+    return Cont
+print("Tamanho da lista: " +str(Tamanho(L))) 
 
-#maior valor da lista
-max_value = max(l)
-print("Maior valor da lista: ", max_value)
+print("\n")
+print("--- Exercício 1.b ---")
+def MaxValor():
+    Maior = 0
+    for j in L:
+        if (Maior < j):
+            Maior = j
+    print("Maior valor da lista: " + str(Maior))  
+MaxValor() 
 
-#menor valor da lista
-min_value = min(l)
-print("Menor valor da lista: ", min_value)
+print("\n")
+print("--- Exercício 1.c ---")
+def MinValor():
+    Menor=L[0]
+    for j in L:
+        if (Menor > j):
+            Menor = j
+    print("Menor valor da lista: " + str(Menor))  
+MinValor()
 
-#soma de todos os elementos da lista
-soma_lista = sum(l)
-print("Soma da lista: ", soma_lista)
+print("\n")
+print("--- Exercício 1.d ---")
+def sum():
+    Soma = 0
+    for j in L:
+        Soma = Soma + j
+    print ("Soma de todos valores da lista: "+ str(Soma))
+sum()
 
-#lista em ordem crescente
-ordem_cresc = sorted(l)
-print("Lista em ordem crescente: ", ordem_cresc)
+L.sort(reverse = False)
+print("\n")
+print("--- Exercício 1.e ---")
+def OrdCre():
+    for j in range(0, Tamanho(L)):
+        for i in range(j+1, Tamanho(L)):
+            if L[j] > L[i]:
+                    L[j], L[j] = L[i], L[j]
+    print ("Lista em ordem crescente: "+ str(L)) 
+OrdCre() 
 
-#lista em ordem decrescente
-ordem_decresc = sorted(l, reverse=True)
-print("Lista em ordem descrescente: ", ordem_decresc)
+L.sort(reverse = True)
+print("\n")
+print("--- Exercício 1.f ---")
+def OrdDec():
+    for j in range(0,Tamanho(L)):
+        for i in range(j+1,Tamanho(L)):
+            if L[j] < L[i]:
+                    L[j], L[i] = L[i], L[j]
+    print ("Lista em ordem decrescente: "+ str(L)) 
+OrdDec() 
