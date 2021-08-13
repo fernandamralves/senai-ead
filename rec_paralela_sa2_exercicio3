@@ -1,0 +1,22 @@
+l = [5, 8, 10, 4, 9, 47, 74, 52, 4, 88, 41, 35, 78, 64, 97, 10, 41, 27, 91, 20]
+
+print("Os valores de referência são: ", l)
+print("\n")
+
+#tamanho
+tamanho = len(l)
+
+#soma
+soma = sum(l)
+
+#media
+media = ((soma) / (tamanho))
+print("Média dos valores : ",media)
+
+#maior valor 
+max_value = max(l)
+print("Maior valor: ", max_value)
+
+#menor valor
+min_value = min(l)
+print("Menor valor: ", min_value)
