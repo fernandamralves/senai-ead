@@ -1,0 +1,27 @@
+l = [5, 7, 2, 9, 4, 1, 3]
+
+print("Lista: ", l)
+print("\n")
+
+#tamanho da lista
+print("Tamanho da lista: " + str(len(l)))
+
+#maior valor da lista
+max_value = max(l)
+print("Maior valor da lista: ", max_value)
+
+#menor valor da lista
+min_value = min(l)
+print("Menor valor da lista: ", min_value)
+
+#soma de todos os elementos da lista
+soma_lista = sum(l)
+print("Soma da lista: ", soma_lista)
+
+#lista em ordem crescente
+ordem_cresc = sorted(l)
+print("Lista em ordem crescente: ", ordem_cresc)
+
+#lista em ordem decrescente
+ordem_decresc = sorted(l, reverse=True)
+print("Lista em ordem descrescente: ", ordem_decresc)
