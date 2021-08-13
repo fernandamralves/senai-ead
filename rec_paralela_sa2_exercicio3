@@ -1,22 +1,45 @@
-l = [5, 8, 10, 4, 9, 47, 74, 52, 4, 88, 41, 35, 78, 64, 97, 10, 41, 27, 91, 20]
+def checkInput(prompt):
+  result = input(prompt)
+  if not result.strip():
+      result = 0
+  return result
 
-print("Os valores de referência são: ", l)
+def sum(l):
+    Soma = 0
+    for j in l:
+        Soma = Soma + j
+    return Soma
+
+def MaxValor(l):
+    Maior = 0
+    for j in l:
+        if (Maior < j):
+            Maior = j
+    return Maior
+
+def MinValor(l):
+    Menor = l[0]
+    for j in l:
+        if (Menor > j):
+            Menor = j
+    return Menor   
+
+
+lista = []
+quant = 20
+
+print("--- Operações matemáticas com 20 números ---") 
+print("Digite 20 números a seguir.")
+for j in range(0, quant):
+    
+    numero = int(checkInput("Digite o "+str(j+1)+"º número: "))
+    
+    lista.append(numero) 
+    
+soma_total = sum(lista)
+media = soma_total / quant
+
 print("\n")
-
-#tamanho
-tamanho = len(l)
-
-#soma
-soma = sum(l)
-
-#media
-media = ((soma) / (tamanho))
-print("Média dos valores : ",media)
-
-#maior valor 
-max_value = max(l)
-print("Maior valor: ", max_value)
-
-#menor valor
-min_value = min(l)
-print("Menor valor: ", min_value)
+print ("A média dos valores digitados é: " + str(media))
+print ("O maior valor digitiado é: " + str(MaxValor(lista)))
+print ("O menor valor digitado é: " + str(MinValor(lista)))
