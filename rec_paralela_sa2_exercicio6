@@ -1,10 +1,16 @@
-horas = float(input("----- Conversor de horas para segundos.----- \nDigite quantas horas deseja converter: "))
+def checkInput(prompt):
+  result = input(prompt)
+  if not result.strip():
+      result = 0
+  return result
 
-segundos = int(horas * 3600)
+horas = float(checkInput("----- Conversor de horas para segundos ----- \nDigite quantas horas deseja converter: "))
+seg = 3600
+total = horas * seg
 
 if (horas <= 0):
     print("É necessário digitar um número válido de horas.")
-elif (segundos <= 3600): 
-    print(horas,"hora é ",segundos,"segundos")
+elif (total <= 3600): 
+    print(str(horas)+" hora é igual a "+str(total)+" segundos.")
 else:
-    print(horas,"horas são ",segundos,"segundos")
+    print(str(horas)+" horas são iguais a "+str(total)+" segundos.")
