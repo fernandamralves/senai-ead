@@ -1,0 +1,6 @@
+contagem = 1
+olimpiadas = ("volei", "skate", "basquete", "remo", "judô", "tênis", "natação", "hipismo", "ginástica rítmica")
+
+for olimpiadas in olimpiadas:
+    print(contagem, olimpiadas)
+    contagem += 1
