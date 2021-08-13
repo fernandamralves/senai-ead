@@ -5,7 +5,10 @@ print('-' * 50)
 compra = float(input("Digite o valor total da compra: R$ "))
 pagamento = float(input("Digite o valor recebido de pagamento: R$ "))
 valor = float(pagamento - compra)
+print("")
 print("Troco: %.2f" % (valor))
+print("")
+print("Entregar ao cliente:")
 
 cedulas = 0
 valorcedulaatual = 100
