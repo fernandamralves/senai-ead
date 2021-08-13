@@ -1,2 +1,12 @@
-numero = int(input("Qual o tamanho desejado da linha: "))
-print("_" * numero)
+def checkInput(prompt):
+  result = input(prompt)
+  if not result.strip():
+      result = 0
+  return result
+linha = "_"
+
+print("-------- Desenhando uma linha --------")
+tamanho = int(checkInput("Qual o tamanho desejado da linha: "))
+
+desenho = linha*tamanho
+print(desenho)
