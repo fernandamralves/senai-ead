@@ -1,0 +1,10 @@
+horas = float(input("----- Conversor de horas para segundos.----- \nDigite quantas horas deseja converter: "))
+
+segundos = int(horas * 3600)
+
+if (horas <= 0):
+    print("É necessário digitar um número válido de horas.")
+elif (segundos <= 3600): 
+    print(horas,"hora é ",segundos,"segundos")
+else:
+    print(horas,"horas são ",segundos,"segundos")
