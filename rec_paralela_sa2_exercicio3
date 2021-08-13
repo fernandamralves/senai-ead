@@ -41,5 +41,5 @@ media = soma_total / quant
 
 print("\n")
 print ("A média dos valores digitados é: " + str(media))
-print ("O maior valor digitiado é: " + str(MaxValor(lista)))
-print ("O menor valor digitado é: " + str(MinValor(lista)))
+print ("O maior valor digitiado foi: " + str(MaxValor(lista)))
+print ("O menor valor digitado foi: " + str(MinValor(lista)))
